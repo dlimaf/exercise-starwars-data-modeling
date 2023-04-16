@@ -29,6 +29,8 @@ class Characters(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
+    gender = Column(String)
+    eye_color = Column(String)
 
 class Planets(Base):
     __tablename__ = 'planets'
@@ -36,6 +38,8 @@ class Planets(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
+    climate = Column(String)
+    population = Column(Integer)
 
 class Starships(Base):
     __tablename__ = 'starships'
@@ -43,6 +47,8 @@ class Starships(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
+    model = Column(String)
+    starship_class = Column(String)
 
 class Films(Base):
     __tablename__ = 'films'
@@ -50,6 +56,8 @@ class Films(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
+    director = Column(String)
+    producer = Column(String)
 
 class FavoritesCharacters(Base):
     __tablename__ = 'favoritescharacters'
